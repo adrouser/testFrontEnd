@@ -8,10 +8,10 @@ async function loadProjectTitles() {
     const url = `https://api.github.com/repos/${owner}/${repo}/contents/${folder}`;
 
     // Prepare headers for the API request
-    const headers= '';
+   
 
     try {
-        const response = await fetch(url, { headers });
+        const response = await fetch(url);
         if (!response.ok) {
             throw new Error('Failed to fetch data');
         }
